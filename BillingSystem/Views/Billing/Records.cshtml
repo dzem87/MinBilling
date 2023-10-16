@@ -1,0 +1,25 @@
+﻿@model IEnumerable<BillingSystem.Models.BillRecord>
+
+<h2>All Billing Records</h2>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Customer Name</th>
+            <th>Bill Amount</th>
+            <th>Submission Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var record in Model)
+        {
+            <tr>
+                <td>@record.ID</td>
+                <td>@record.CustomerName</td>
+                <td>@record.BillAmount</td>
+                <td>@record.SubmissionTime</td>
+            </tr>
+        }
+    </tbody>
+</table>
